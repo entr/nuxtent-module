@@ -37,7 +37,8 @@
     "release": "standard-version && git push --follow-tags && npm publish"
   },
   "peerDependencies": {
-    "@nuxtjs/axios": "^4.5.2"
+    "@nuxtjs/axios": "^4.5.2",
+    "fs-extra": "^5.0.0"
   },
   "dependencies": {
     "chalk": "^2.3.0",

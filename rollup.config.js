@@ -67,7 +67,15 @@ export default [
       }),
       ...corePlugins
     ],
-    external: ['path', 'fs', 'querystring', 'express', 'axios', ...external],
+    external: [
+      'path',
+      'fs',
+      'fs-extra',
+      'querystring',
+      'express',
+      'axios',
+      ...external
+    ],
     globals: {
       express: 'express'
     }
