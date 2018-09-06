@@ -34,7 +34,9 @@ export default ({ app, isStatic, hotReload, route }) => {
       return cache[apiEndpoint]
     } else if (process.client) {
       const allButFirstSlash = /(?!^\/)(\/)/g
+      console.log('permalink: ', permalink)
       const serializedPermalink = permalink.replace(allButFirstSlash, '.')
+      console.log('serializedPermalink: ', serializedPermalink)
       const browserPath = join(path, serializedPermalink) + '.json'
       if (!cache[browserPath]) {
         cache[browserPath] = (await app.$axios.get(browserPath)).data
